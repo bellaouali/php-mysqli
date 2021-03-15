@@ -2,7 +2,7 @@
 include_once('database.php');
 
 //selectionner les message dans la base de donnée
-$query = "SELECT * FROM utilisateurs";  
+$query = "SELECT * FROM messages JOIN utilisateurs ON messages.id_message = utilisateurs.id_utilisateur ";
 $results = mysqli_query($link, $query);
 $messages = mysqli_fetch_assoc($results);
 
@@ -24,7 +24,7 @@ $messages = mysqli_fetch_assoc($results);
             <h1>Welcome Abdelilah</h1>
         </div>
         <div class="messages container">
-         
+
             <ul>
                 <?php foreach ($results as $row) : ?>
                     <?php if ($row) {
@@ -35,11 +35,11 @@ $messages = mysqli_fetch_assoc($results);
                     ?>
                     <li class="message"><span> <?php echo $row["temps"]; ?> - </span><?php echo $row["utilisateur"]; ?> : <?php echo $row["contenu_message"]; ?> </li>
                 <?php endforeach ?>
-                
+
             </ul>
         </div>
         <div class=" container">
-            <form class="comment" action="traitement.php" method="post">
+            <form class="comment" action="" method="post">
                 <input type="text" name="utilisateur" id="utilisateur" placeholder="Saisir votre username">
                 <input type="text" name="message" id="message" placeholder="Saisir votre message">
                 <input type="submit" class="envoyer" name="envoyer" value="Envoyer">

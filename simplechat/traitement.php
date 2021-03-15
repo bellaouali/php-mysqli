@@ -6,7 +6,7 @@ if (isset($_POST['envoyer'])) {
     $messages = $_POST['message'];
     
 
-    $sql = "INSERT INTO  messages (utilisateur,contenu_message) VALUES ('$utilisateur','$messages')";
+    $sql = "INSERT INTO messages (utilisateur,contenu_message) VALUES ('$utilisateur','$messages')";
     if (mysqli_query($link, $sql)) {
         echo "New record created successfully !";
     } else {
@@ -15,7 +15,6 @@ if (isset($_POST['envoyer'])) {
     mysqli_close($link);
 
     header("Location:index.php");
-
 
 }
 
