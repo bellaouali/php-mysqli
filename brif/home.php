@@ -1,7 +1,7 @@
 <?php
 include_once('db.php');
 //selectionner les message dans la base de donnée
-$query = "SELECT * FROM messages";
+$query = "SELECT * FROM messages ORDER BY temps DESC limit 4";
 $results = mysqli_query($con, $query);
 $messages = mysqli_fetch_assoc($results);
 ?>
@@ -36,16 +36,15 @@ $messages = mysqli_fetch_assoc($results);
             <ul>
                 <?php foreach ($results as $row) : ?>
                     <?php if ($row) {
-                        echo '<messages style="color: green">';
+                        echo '<messages style="color: #3274d6">';
                     }
                     ?>
-                    <li class="message"><span> <?php echo $row["temps"]; ?> - </span><?php echo $row["utilisateur"]; ?> : <?php echo $row["contenu_message"]; ?> </li>
+                    <li class="message"><span> <?php echo $row["temps"]; ?> </span><?php echo $row["utilisateur"]; ?> : <?php echo $row["contenu_message"]; ?> </li>
                 <?php endforeach ?>
             </ul>
         </div>
         <div class=" container">
             <form class="comment" action="traitement.php" method="post">
-                <input type="text" name="utilisateur" id="utilisateur" placeholder="Saisir votre username">
                 <input type="text" name="contenu_message" id="message" placeholder="Saisir votre message">
                 <input type="submit" class="envoyer" name="envoyer" value="Envoyer">
             </form>

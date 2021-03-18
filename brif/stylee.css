@@ -209,7 +209,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-color: rgb(0, 0, 0);
+    border-color: #3274d6;
     border-style: solid;
     margin-top: 14em;
     height: 5vh;
@@ -219,6 +219,7 @@ main {
     border-style: solid;
     padding: 2em;
     background-color: #fff;
+    color: #3274d6;
     width: 61%;
     HEIGHT: 300PX;
     MARGIN-LEFT: 19%;
@@ -240,13 +241,24 @@ main {
 
 #utilisateur {
     width: 25%;
-    
 }
 
-#message {
-    width: 55%;
+#message{
+    width: 80%;
+    height: 50px;
+    border: 2px solid #3274d6;
+    margin-bottom: 20px;
+    padding: 0 15px;
 }
+.envoyer{
+    width: 310px;
+    height: 50px;
+    border: 2px solid #3274d6;
+    margin-bottom: 20px;
+    padding: 0 15px;
 
+
+}
 body.loggedin {
     background-color: #f3f4f7;
 }

@@ -7,7 +7,7 @@ if (isset($_POST['username'])) {
     $email    = $_POST['email'];
     $password = $_POST['password'];
 
-    $query  = ("INSERT INTO `sing_up`(`user_name`, `password`, `email`) VALUES ('$username', '$password', '$email')");
+    $query  = ("INSERT INTO `register`(`username`, `password`, `email`) VALUES ('$username', '$password', '$email')");
     $result = mysqli_query($con, $query);
     if (!$result) {
         echo "error";

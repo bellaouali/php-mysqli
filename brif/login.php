@@ -2,16 +2,15 @@
 session_start();
 include_once('db.php');
 if (count($_POST) > 0) {
-    $query = "SELECT * FROM sing_up WHERE user_name = '" . $_POST["name"] . "' AND password = '" . $_POST["password"] . "' ";
+    $query = "SELECT * FROM register WHERE username = '" . $_POST["username"] . "' AND password = '" . $_POST["password"] . "' ";
     $result = mysqli_query($con, $query);
     $row  = mysqli_fetch_array($result);
     if (is_array($row)) {
         $_SESSION["id"] = $row['id'];
-        $_SESSION["name"] = $row['user_name'];
+        $_SESSION["username"] = $row['username'];
         header("Location:home.php");
     }
 }
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,7 +29,7 @@ if (count($_POST) > 0) {
         <form action="" method="post">
 
             <label for="name"><i class="fas fa-user"></i></label>
-            <input type="text" name="name" placeholder="Name" id="name" required>
+            <input type="text" name="username" placeholder="Name" id="name" required>
 
             <label for="password"><i class="fas fa-lock"></i></label>
             <input type="number" name="password" placeholder="Password" id="password" required>
