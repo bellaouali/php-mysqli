@@ -1,16 +1,13 @@
 <?php
 session_start();
-require('db.php');
+include_once('db.php');
 if (count($_POST) > 0) {
-    $con = mysqli_connect('localhost', 'root', '', 'sing') or die('Unable To connect');
-    $result = mysqli_query($con, "SELECT * FROM users 
-        WHERE user_name='" . $_POST["username"] . "' and password = '" . $_POST["password"] . "'");
-
+    $query = "SELECT * FROM sing_up WHERE user_name = '" . $_POST["name"] . "' AND password = '" . $_POST["password"] . "' ";
+    $result = mysqli_query($con, $query);
     $row  = mysqli_fetch_array($result);
     if (is_array($row)) {
         $_SESSION["id"] = $row['id'];
-        $_SESSION["name"] = $row['name'];
-    } else {
+        $_SESSION["name"] = $row['user_name'];
         header("Location:home.php");
     }
 }
@@ -23,7 +20,7 @@ if (count($_POST) > 0) {
     <meta charset="utf-8">
     <title>Facebook</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="stylee.css" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -33,7 +30,7 @@ if (count($_POST) > 0) {
         <form action="" method="post">
 
             <label for="name"><i class="fas fa-user"></i></label>
-            <input type="text" name="username" placeholder="Name" id="name" required>
+            <input type="text" name="name" placeholder="Name" id="name" required>
 
             <label for="password"><i class="fas fa-lock"></i></label>
             <input type="number" name="password" placeholder="Password" id="password" required>
@@ -42,7 +39,5 @@ if (count($_POST) > 0) {
         </form>
     </div>
 </body>
-
 </body>
-
 </html>
