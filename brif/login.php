@@ -17,7 +17,7 @@ if (count($_POST) > 0) {
 
 <head>
     <meta charset="utf-8">
-    <title>Facebook</title>
+    <title>YouChat</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
     <link href="stylee.css" rel="stylesheet" type="text/css">
 
@@ -25,7 +25,7 @@ if (count($_POST) > 0) {
 
 <body>
     <div class="login">
-        <h1>Facebook</h1>
+        <h1>YouChat</h1>
         <form action="" method="post">
 
             <label for="name"><i class="fas fa-user"></i></label>
