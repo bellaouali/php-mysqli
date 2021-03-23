@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once('db.php');
 if (isset($_POST['submit'])) {
     $username = $_POST['username'];
@@ -27,19 +28,19 @@ if (isset($_POST['submit'])) {
 
 <body>
     <div class="register">
-        <h1>YouChat</h1>
+        <h1><i class="fab fa-yoast"></i>YouChat</h1>
         <form action="" method="post">
             <label for="username"><i class="fas fa-user"></i></label>
-            <input type="text" name="username" placeholder="Username" id="username" required>
+            <input type="text" name="username" placeholder="Username"  required>
 
             <label for="pseudo"><i class="fas fa-user"></i></label>
-            <input type="text" name="pseudo" placeholder="pseudo" id="pseudo" required>
+            <input type="text" name="pseudo" placeholder="pseudo"  required>
 
             <label for="password"><i class="fas fa-lock"></i></label>
-            <input type="password" name="password" placeholder="Password" id="password" required>
+            <input type="password" name="password" placeholder="Password"  required>
 
             <label for="email"><i class="fas fa-envelope"></i></label>
-            <input type="email" name="email" placeholder="Email" id="email" required>
+            <input type="email" name="email" placeholder="Email"  required>
             <input type="submit" name="submit" value="Register">
             <button class="button"><a href="login.php">Login</a></button>
         </form>

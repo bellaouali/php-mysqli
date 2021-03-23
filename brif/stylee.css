@@ -2,72 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.navtop {
-    background-color: white;
-    height: 60px;
-    width: 100%;
-}
-
-.navtop div {
-    display: flex;
-    height: 100%;
-}
-
-.navtop div h1, .navtop div a {
-    display: inline-flex;
-    align-items: center;
-}
-
-.navtop div h1 {
-    flex: 1;
-    font-size: 30px;
-    font-weight: normal;
-    color: #4cd9f1;
-}
-
-.navtop div a {
-    padding: 0 20px;
-    font-size: x-large;
-    text-decoration: none;
-    color: #4cd9f1;
-}
-
-.navtop div a i {
-    padding: 2px 8px 0 0;
-}
-
-.navtop div a:hover {
-    color: #eaebed;
-}
-
-body.loggedin {
-    background-color: #f3f4f7;
-}
-
-.content {
-    width: 1000px;
-    margin: 0 auto;
-}
-
-.content h2 {
-    margin: 0;
-    padding: 25px 0;
-    font-size: 22px;
-    border-bottom: 1px solid #e0e0e3;
-    color: #4cd9f1;
+    font-family: cursive;
 }
 
 .register {
     width: 400px;
-    background-color: #ffffff;
     box-shadow: 0 0 50px 0 #4cd9f1;
     margin: 100px auto;
 }
@@ -115,23 +54,24 @@ body.loggedin {
 }
 
 .register form input[type="submit"]:hover {
-    background-color: #327d8a;
+    background-color: #73a0f3;
 }
+
 .button {
     width: 100%;
     padding: 15px;
     margin-top: 3px;
     background-color: #4cd9f1;
     border: 0;
-    color: #ffffff;
 }
-.button a{
+
+.button a {
     text-decoration: none;
     color: azure;
 }
+
 .login {
     width: 400px;
-    background-color: #ffffff;
     box-shadow: 0 0 50px 0 #4cd9f1;
     margin: 100px auto;
 }
@@ -161,7 +101,7 @@ body.loggedin {
     color: #ffffff;
 }
 
-.login form input[type="password"], .login form input[type="text"] {
+.login form input[type="number"], .login form input[type="text"] {
     width: 310px;
     height: 50px;
     border: 1px solid #dee0e4;
@@ -183,26 +123,74 @@ body.loggedin {
     background-color: #327d8a;
 }
 
-.login form input[type="email"], .login form input[type="text"] {
-    width: 310px;
-    height: 50px;
-    border: 1px solid #dee0e4;
-    margin-bottom: 20px;
-    padding: 0 15px;
+body.loggedin {
+    background-color: #f3f4f7;
 }
 
-form input[type="number"], .login form input[type="text"] {
-    width: 310px;
-    height: 50px;
-    border: 1px solid #dee0e4;
-    margin-bottom: 20px;
-    padding: 0 15px;
+.navtop {
+    background-color: white;
+    height: 60px;
 }
 
-main {
-    width: 100%;
-    margin: auto;
+.navtop div {
+    display: flex;
+    height: 100%;
 }
+
+.navtop div h1, .navtop div a {
+    display: inline-flex;
+    align-items: center;
+}
+
+.navtop div h1 {
+    flex: 1;
+    font-size: 30px;
+    color: #4cd9f1;
+}
+
+.navtop div a {
+    padding: 0 20px;
+    text-decoration: none;
+    color: #4cd9f1;
+}
+
+.navtop div a:hover {
+    color: #eaebed;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+.content {
+    width: 80%;
+    margin: 1rem auto;
+    background-color: #fff;
+}
+
+.content h2 {
+    height: 7vh;
+    border-bottom: 2px solid #e0e0e3;
+    color: #4cd9f1;
+}
+
+.content p {
+    padding: 25px;
+    background-color: #fff;
+}
+
+.content, table td, tr {
+    margin-top: 4rem;
+    padding: 32px 48px;
+    box-shadow: 0 0 17px 0 #4cd9f1;
+}
+table,  tr{
+    width: 80%;
+    background-color: #fff;
+    margin: 2rem auto;
+ }
 
 .titleBar {
     display: flex;
@@ -215,47 +203,61 @@ main {
 }
 
 .messages {
-    padding: 2em;
     background-color: white;
     width: 80%;
-    height: 50vh;
-    font-size: 20px;
-    margin: 0 auto;
+    height: 40vh;
+    margin: 2rem auto;
     box-shadow: 0 0 50px 0 #4cd9f1;
-
-    
 }
 
 .message {
     width: 100%;
     margin-top: .6em;
+    font-size: x-large;
     list-style: none;
     text-align: center;
 }
 
-
 .comment {
     display: flex;
     margin: 0 auto;
-    width: 63%;
-    margin-top: 1rem;
+    width: 80%;
 }
 
 #utilisateur {
     width: 25%;
 }
 
-#message{
+#message {
     width: 100%;
-    height: 50px;
-    border: 1px solid black;
     margin-bottom: 20px;
     padding: 0 15px;
 }
+
 .envoyer {
     width: 310px;
     height: 50px;
-    margin-bottom: 20px;
     background-color: #4cd9f1;
 }
 
+
+
+h2 {
+    width: 30ch;
+    font-size: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: tapper 3s steps(35);
+}
+
+@keyframes tapper {
+    from {
+        width: 0ch;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
