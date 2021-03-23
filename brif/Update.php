@@ -21,7 +21,7 @@ $row = mysqli_fetch_array($result);
 
 <body>
     <div class="register">
-        <h1>Creating</h1>
+        <h1>Update</h1>
         <form action="" method="post">
 
             <label for="username"><i class="fas fa-user"></i></label>
@@ -35,8 +35,8 @@ $row = mysqli_fetch_array($result);
 
             <label for="email"><i class="fas fa-envelope"></i></label>
             <input type="email" name="email" value="<?php echo $row["email"]; ?>">
-            <input type="submit" name="submit" value="submit">
-            <button class="button"><a href="Read.php">BACK</a></button>
+            <input type="submit" name="submit" value="Changed">
+            <a href="Read.php">BACK</a>
     </div>
     </form>
 </body>

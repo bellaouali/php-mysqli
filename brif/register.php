@@ -29,20 +29,23 @@ if (isset($_POST['submit'])) {
 <body>
     <div class="register">
         <h1><i class="fab fa-yoast"></i>YouChat</h1>
-        <form action="" method="post">
-            <label for="username"><i class="fas fa-user"></i></label>
+        
+        <form action="" method="POST">
+            <label><i class="fas fa-user"></i></label>
             <input type="text" name="username" placeholder="Username"  required>
 
-            <label for="pseudo"><i class="fas fa-user"></i></label>
+            <label><i class="fas fa-user"></i></label>
             <input type="text" name="pseudo" placeholder="pseudo"  required>
 
-            <label for="password"><i class="fas fa-lock"></i></label>
+            <label><i class="fas fa-lock"></i></label>
             <input type="password" name="password" placeholder="Password"  required>
 
-            <label for="email"><i class="fas fa-envelope"></i></label>
+            <label><i class="fas fa-envelope"></i></label>
             <input type="email" name="email" placeholder="Email"  required>
+
             <input type="submit" name="submit" value="Register">
-            <button class="button"><a href="login.php">Login</a></button>
+
+            <a href="login.php">Login</a>
         </form>
     </div>
 </body>

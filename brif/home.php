@@ -18,40 +18,38 @@ $messages = mysqli_fetch_assoc($results);
     <title>YouChat</title>
 </head>
 
-<body>
+<body class="loggedin">
     <main>
-
-        <body class="loggedin">
-            <nav class="navtop">
-                <div>
-                    <h1><i class="fab fa-yoast"></i>YouChat</h1>
-                    <a href="profile.php"><i class="fas fa-id-badge"></i>Profile</a>
-                    <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
-                </div>
-            </nav>
-            <?php
-            $username = $_SESSION['username'];
-            ?>
-            <div class="content">
-                <h2 class="tapper"><?php echo "Welcome back : $username " ?></h2>
+        <nav class="navtop">
+            <div>
+                <h1><i class="fab fa-yoast"></i>YouChat</h1>
+                <a href="profile.php"><i class="fas fa-id-badge"></i>Profile</a>
+                <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
             </div>
-        </body>
-        <div class="messages container">
-            <ul>
-                <?php foreach ($results as $row) : ?>
+        </nav>
+        <?php
+        $pseudo = $_SESSION["pseudo"];
+        ?>
+        <div class="content">
+            <h2 class="tapper"><?php echo "Welcome back : $pseudo " ?></h2>
+        </div>
+        <div class="messages">
+            <?php foreach ($results as $row) : ?>
+                <ul>
                     <li class="message">
-                        <?php echo '<message style="color:#4cd9f1">' . $row["temps"] ?> :
+                        <?php echo '<message style="color:black">' . $row["temps"] ?> :
                         <?php echo '<message style="color:blue">' . $row["contenu_message"]; ?>
                     </li>
-                <?php endforeach ?>
-            </ul>
+                </ul>
+            <?php endforeach ?>
         </div>
         <div class="container">
-            <form class="comment" action="traitement.php" method="POST">
+            <form action="traitement.php" method="POST">
                 <input class="comment" type="text" name="contenu_message" placeholder="Saisir votre message">
-                <input type="submit" class="envoyer" name="envoyer" value="Envoyer">
+                <input class="envoyer" type="submit" name="envoyer" value="Envoyer">
             </form>
         </div>
     </main>
 </body>
+
 </html>

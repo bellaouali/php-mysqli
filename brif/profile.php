@@ -21,7 +21,7 @@ session_start();
 		</div>
 	</nav>
 	<div class="content">
-		<h2>Your Profile Account Details YouChat</h2>
+		<h2>Your Profile Account Details</h2>
 	</div>
 	<div>
 		<table>

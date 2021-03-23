@@ -3,18 +3,18 @@
     padding: 0;
     box-sizing: border-box;
     font-family: cursive;
+    
 }
 
 .register {
     width: 400px;
-    box-shadow: 0 0 50px 0 #4cd9f1;
+    box-shadow: 0 0 50px 0 beige;
     margin: 100px auto;
 }
 
 .register h1 {
     text-align: center;
-    color: #4cd9f1;
-    padding: 20px 0 20px 0;
+    padding: 20px 0;
     border-bottom: 1px solid #dee0e4;
 }
 
@@ -32,8 +32,7 @@
     align-items: center;
     width: 50px;
     height: 50px;
-    background-color: #4cd9f1;
-    color: #ffffff;
+    background-color: beige;
 }
 
 .register form input[type="password"], .register form input[type="text"], .register form input[type="email"] {
@@ -48,39 +47,37 @@
     width: 100%;
     padding: 15px;
     margin-top: 1rem;
-    background-color: #4cd9f1;
+    background-color: beige;
     border: 0;
-    color: #ffffff;
+    font-size: large;
 }
 
 .register form input[type="submit"]:hover {
-    background-color: #73a0f3;
-}
+    font-size: x-large;
 
-.button {
+}
+.register a {
     width: 100%;
     padding: 15px;
     margin-top: 3px;
-    background-color: #4cd9f1;
-    border: 0;
-}
-
-.button a {
+    background-color: beige;
+    text-align: center;
     text-decoration: none;
-    color: azure;
+    color: black;
+} 
+.register a:hover {
+    font-size: x-large;
 }
 
 .login {
     width: 400px;
-    box-shadow: 0 0 50px 0 #4cd9f1;
-    margin: 100px auto;
+    box-shadow: 0 0 50px 0 beige;
+    margin: 10rem auto;
 }
 
 .login h1 {
     text-align: center;
-    color: #4cd9f1;
-    font-size: 31px;
-    padding: 20px 0 20px 0;
+    padding: 20px 0;
     border-bottom: 1px solid #dee0e4;
 }
 
@@ -88,7 +85,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 20px;
+    padding-top: 42px;
 }
 
 .login form label {
@@ -97,8 +94,7 @@
     align-items: center;
     width: 50px;
     height: 50px;
-    background-color: #4cd9f1;
-    color: #ffffff;
+    background-color: beige;
 }
 
 .login form input[type="number"], .login form input[type="text"] {
@@ -113,19 +109,33 @@
     width: 100%;
     padding: 15px;
     margin-top: 20px;
-    background-color: #4cd9f1;
+    background-color: beige;
     border: 0;
-    font-weight: bold;
-    color: #ffffff;
+    font-size: large;
 }
 
 .login form input[type="submit"]:hover {
-    background-color: #327d8a;
+    font-size: x-large;
+
+}
+.login a {
+    width: 100%;
+    padding: 15px;
+    margin-top: 3px;
+    background-color: beige;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+} 
+.login a:hover {
+    font-size: x-large;
 }
 
+ 
 body.loggedin {
-    background-color: #f3f4f7;
+    background-color: gray;
 }
+
 
 .navtop {
     background-color: white;
@@ -134,72 +144,44 @@ body.loggedin {
 
 .navtop div {
     display: flex;
-    height: 100%;
 }
 
-.navtop div h1, .navtop div a {
-    display: inline-flex;
-    align-items: center;
-}
-
-.navtop div h1 {
+.navtop h1 {
     flex: 1;
     font-size: 30px;
-    color: #4cd9f1;
 }
 
 .navtop div a {
+    display: inline-flex;
+    align-items: center;
     padding: 0 20px;
     text-decoration: none;
-    color: #4cd9f1;
+    color: black;
 }
 
 .navtop div a:hover {
-    color: #eaebed;
-}
-.content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center
+    color: beige;
+    font-size: x-large;
 }
 
 .content {
     width: 80%;
     margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    box-shadow: 0 0 20px 0 beige;
     background-color: #fff;
 }
 
 .content h2 {
+    width: 23ch;
     height: 7vh;
     border-bottom: 2px solid #e0e0e3;
-    color: #4cd9f1;
-}
-
-.content p {
-    padding: 25px;
-    background-color: #fff;
-}
-
-.content, table td, tr {
-    margin-top: 4rem;
-    padding: 32px 48px;
-    box-shadow: 0 0 17px 0 #4cd9f1;
-}
-table,  tr{
-    width: 80%;
-    background-color: #fff;
-    margin: 2rem auto;
- }
-
-.titleBar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-color: #4cd9f1;
-    border-style: solid;
-    margin-top: 14em;
-    height: 5vh;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: tapper 3s steps(35);
 }
 
 .messages {
@@ -207,47 +189,45 @@ table,  tr{
     width: 80%;
     height: 40vh;
     margin: 2rem auto;
-    box-shadow: 0 0 50px 0 #4cd9f1;
+    box-shadow: 0 0 20px 0 beige;
 }
 
 .message {
-    width: 100%;
-    margin-top: .6em;
-    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
     list-style: none;
-    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: 1rem auto;
+    padding: 10px;
+    box-shadow: 0 0 20px 0 beige;
+    background-color: #fff;
 }
 
 .comment {
-    display: flex;
-    margin: 0 auto;
-    width: 80%;
-}
-
-#utilisateur {
-    width: 25%;
-}
-
-#message {
-    width: 100%;
-    margin-bottom: 20px;
+    width: 70%;
+    height: 50px;
     padding: 0 15px;
 }
 
 .envoyer {
-    width: 310px;
+    width: 29%;
     height: 50px;
-    background-color: #4cd9f1;
+    background-color: beige;
 }
 
+table {
+    width: 80%;
+    background-color: #fff;
+    margin: 2rem auto;
+}
 
-
-h2 {
-    width: 30ch;
-    font-size: 30px;
-    overflow: hidden;
-    white-space: nowrap;
-    animation: tapper 3s steps(35);
+td {
+    padding: 20px;
+    box-shadow: 0 0 20px 0 beige;
 }
 
 @keyframes tapper {

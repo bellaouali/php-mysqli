@@ -33,8 +33,8 @@ if (count($_POST) > 0) {
 
             <label for="email"><i class="fas fa-envelope"></i></label>
             <input type="email" name="email" placeholder="Email">
-            <input type="submit" name="submit" value="Register">
-            <button class="button"><a href="Read.php">BACK</a></button>
+            <input type="submit" name="submit" value="Add">
+            <a href="Read.php">BACK</a>
         </form>
     </div>
 </body>

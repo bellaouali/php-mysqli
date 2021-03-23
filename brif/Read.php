@@ -25,8 +25,8 @@ $result = mysqli_query($con, $query);
         </div>
     </nav>
     <div class="content">
-        <h2><i class="fas fa-user-friends"></i>List users</h2>
-        
+        <h2>  Your users Account Details</h2>
+
     </div>
     <div>
         <table>

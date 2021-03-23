@@ -28,17 +28,21 @@ if (count($_POST) > 0) {
 <body>
     <div class="login">
         <h1><i class="fab fa-yoast"></i>YouChat</h1>
+
         <form action="" method="post">
 
-            <label for="name"><i class="fas fa-user"></i></label>
-            <input type="text" name="username" placeholder="Name" id="name" required>
+            <label><i class="fas fa-user"></i></label>
+            <input type="text" name="username" placeholder="Name" required>
 
-            <label for="number"><i class="fas fa-lock"></i></label>
-            <input type="number" name="password" placeholder="Password" id="password" required>
+            <label><i class="fas fa-lock"></i></label>
+            <input type="number" name="password" placeholder="Password" required>
 
             <input type="submit" value="Login">
+            <a href="register.php">Register</a>
+
         </form>
     </div>
 </body>
 </body>
+
 </html>
