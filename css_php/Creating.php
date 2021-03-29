@@ -18,12 +18,12 @@ if (count($_POST) > 0) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
     <link rel="stylesheet" href="stylee.css">
-    <title>Document</title>
+    <title>Create</title>
 </head>
 
 <body>
     <div class="register">
-        <h1>Creating</h1>
+        <h1>Create</h1>
         <form action="" method="post">
             <label><i class="fas fa-user"></i></label>
             <input type="text" name="username" placeholder="Username">
