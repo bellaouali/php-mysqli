@@ -1,0 +1,17 @@
+fieldset {
+    margin:0 auto;
+    width: 235px;
+}
+legend {
+    font-size: 3rem;
+    color: blue;
+}
+form div.card {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+label {
+    display: block;
+    font-weight:bold;
+}
+
