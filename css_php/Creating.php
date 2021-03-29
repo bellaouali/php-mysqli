@@ -5,38 +5,40 @@ if (count($_POST) > 0) {
     mysqli_query($con, $query);
     $id = mysqli_insert_id($con);
     if (!empty($id)) {
-        echo "New User Added Successfully";
+        $message = "New User Added Successfully";
     }
 }
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <title>Add user</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-    <link href="stylee.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="stylee.css">
+    <title>Document</title>
 </head>
 
 <body>
     <div class="register">
-        <h1>Add user</h1>
+        <h1>Creating</h1>
         <form action="" method="post">
-            <label for="username"><i class="fas fa-user"></i></label>
+            <label><i class="fas fa-user"></i></label>
             <input type="text" name="username" placeholder="Username">
 
-            <label for="pseudo"><i class="fas fa-user"></i></label>
+            <label><i class="fas fa-user"></i></label>
             <input type="text" name="pseudo" placeholder="pseudo">
 
-            <label for="password"><i class="fas fa-lock"></i></label>
+            <label><i class="fas fa-lock"></i></label>
             <input type="password" name="password" placeholder="Password">
 
-            <label for="email"><i class="fas fa-envelope"></i></label>
+            <label><i class="fas fa-envelope"></i></label>
             <input type="email" name="email" placeholder="Email">
-            <input type="submit" name="submit" value="Add">
+            <input type="submit" name="submit" value="Create">
             <a href="Read.php">BACK</a>
         </form>
     </div>
 </body>
 
-</html>

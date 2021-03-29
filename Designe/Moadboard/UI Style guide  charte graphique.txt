@@ -1,0 +1,85 @@
+desktop:
+height: 789px;
+width: 1440px;
+
+
+awerd:
+height: 30px;
+width: 29px;
+
+
+text:typography:
+font-family: Comfortaa;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 27px;
+letter-spacing: -0.015em;
+text-align: center;
+
+color:
+
+color:
+black:000000
+withe:F5F5DC
+beige:FFFFFF
+yello:FFDD85
+blue:3010F1
+
+
+
+
+
+ipad mini 4:
+height: 801px;
+width: 768px;
+
+
+text:
+height: 46.93359375px;
+width: 171px;
+
+
+typography:
+font-family: Comfortaa;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px;
+letter-spacing: -0.015em;
+text-align: center;
+
+color:
+black:000000
+withe:F5F5DC
+beige:FFFFFF
+yello:FFDD85
+blue:3010F1
+
+
+
+
+phone:8 -1
+height: 667px;
+width: 375px;
+
+
+text:
+height: 667px;
+width: 375px;
+
+typography:
+font-family: Comfortaa;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 13px;
+letter-spacing: -0.015em;
+text-align: center;
+
+color:
+black:000000
+withe:F5F5DC
+beige:FFFFFF
+yello:FFDD85
+blue:3010F1

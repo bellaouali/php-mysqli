@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once('db.php');
-$query = "SELECT * FROM messages ORDER BY temps DESC limit 9";
+$query = "SELECT * FROM messages ORDER BY temps DESC limit 7";
 $results = mysqli_query($con, $query);
 $messages = mysqli_fetch_assoc($results);
 ?>
@@ -15,35 +15,37 @@ $messages = mysqli_fetch_assoc($results);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
     <link rel="stylesheet" href="stylee.css">
-    <title>YouChat</title>
+    <title>Document</title>
 </head>
 
-<body class="loggedin">
-    <main>
+<body>
+    <header>
         <nav class="navtop">
             <div>
                 <h1><i class="fab fa-yoast"></i>YouChat</h1>
+            </div>
+            <div class="navv">
                 <a href="profile.php"><i class="fas fa-id-badge"></i>Profile</a>
                 <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
             </div>
         </nav>
-        <?php
-        $pseudo = $_SESSION["pseudo"];
-        ?>
-        <div class="content">
-            <h2 class="tapper"><?php echo "Welcome back : $pseudo " ?></h2>
+    </header>
+    <main>
+        <div class="title">
+            <?php $pseudo = $_SESSION["pseudo"]; ?>
+            <h2><?= "Welcome back : $pseudo " ?> <i class="far fa-laugh-wink"></i></h2>
         </div>
         <div class="messages">
             <?php foreach ($results as $row) : ?>
                 <ul>
                     <li class="message">
-                        <?php echo '<message style="color:black">' . $row["temps"] ?> :
-                        <?php echo '<message style="color:blue">' . $row["contenu_message"]; ?>
+                        <?= "<message style=color:black>" . $row["temps"]; ?> :
+                        <?= "<message style=color:beige>" . $row["contenu_message"]; ?>
                     </li>
                 </ul>
             <?php endforeach ?>
         </div>
-        <div class="container">
+        <div class="commentaire">
             <form action="traitement.php" method="POST">
                 <input class="comment" type="text" name="contenu_message" placeholder="Saisir votre message">
                 <input class="envoyer" type="submit" name="envoyer" value="Envoyer">

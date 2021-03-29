@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+/* start sing_up form */
+
+/* body form */
+
+.register {
+    width: 375px;
+    box-shadow: 0 0 50px 0 black;
+    margin: 115px auto;
+}
+
+/* titel form */
+
+.register h1 {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 2px solid black;
+}
+
+/* styling input  form */
+
+.register form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+    padding-top: 20px;
+}
+
+/* styling incon form */
+
+.register form label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: beige;
+}
+
+/* styling input form */
+
+.register form input[type="password"], .register form input[type="text"], .register form input[type="email"] {
+    width: 310px;
+    height: 50px;
+    border: 1px solid #dee0e4;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+
+/* submit form */
+
+.register form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    margin-top: 1rem;
+    background-color: white;
+    color: black;
+    font-size: large;
+}
+
+/* hover for animation  */
+
+.register form input[type="submit"]:hover {
+    font-size: x-large;
+    color: beige;
+}
+
+/* submit for go to an ather page */
+
+.register a {
+    width: 100%;
+    padding: 15px;
+    margin-top: 3px;
+    font-size: large;
+    text-align: center;
+    text-decoration: none;
+    border: solid 1px black;
+    color: black;
+    background-color: white;
+}
+
+/* hover for animation  */
+
+.register a:hover {
+    font-size: x-large;
+    color: beige;
+}
+
+/* hover for animation  */
+
+/* start login form */
+
+.login {
+    width: 375px;
+    box-shadow: 0 0 50px 0 beige;
+    margin: 180px auto;
+}
+
+/* titel for login form */
+
+.login h1 {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 2px solid black;
+}
+
+/* styling  input form */
+
+.login form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 42px;
+}
+
+/* styling label login form */
+
+.login form label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: beige;
+}
+
+/* styling input form */
+
+.login form input[type="number"], .login form input[type="text"] {
+    width: 310px;
+    height: 50px;
+    border: 1px solid #dee0e4;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+
+/* styling submit form */
+
+.login form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: white;
+    color: black;
+    font-size: large;
+}
+
+/* hover for animation  */
+
+.login form input[type="submit"]:hover {
+    font-size: x-large;
+    color: beige;
+}
+
+/* styling submit for go to an ather page  */
+
+.login a {
+    width: 100%;
+    padding: 15px;
+    margin-top: 3px;
+    font-size: large;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+}
+
+/* hover for animation  navbar */
+
+.login a:hover {
+    font-size: x-large;
+    color: beige;
+}
+
+/* styling navbar top for linding  home profile and read page */
+
+.navtop {
+    width: 99%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+/* styling navbar for go to an ather page */
+
+.navtop div a {
+    padding: 0 20px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 0 20px 0 black;
+}
+
+.navtop div h1 {
+    margin-top: 0.5rem;
+    font-size: 2.5rem;
+    box-shadow: 0 0 20px 0 black;
+}
+
+/* navv for down navbar  */
+
+.navv {
+    margin-top: 1rem;
+}
+
+/* styling for animation  */
+
+.navtop div a:hover {
+    color: beige;
+}
+
+/* box title for taping name user  */
+
+.title {
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 black;
+    margin: 2rem auto;
+}
+
+/* title for taping animation tapper  */
+
+.title h2 {
+    width: 23ch;
+    border-bottom: 2px solid black;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: tapper 3s steps(35);
+    margin: 0 auto;
+}
+
+/* box for table foreatch read users as message he wreat */
+
+.messages {
+    width: 80%;
+    height: 50vh;
+    box-shadow: 0 0 20px 0 black;
+    margin: 2rem auto;
+}
+
+/* styling position message place */
+
+.message {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* box for insid her send and write message  */
+
+.commentaire {
+    width: 80%;
+    margin: 1rem auto;
+    padding: 10px;
+    box-shadow: 0 0 20px 0 black;
+}
+
+/* input form message for users */
+
+.comment {
+    width: 70%;
+    height: 55px;
+    padding: 0 15px;
+}
+
+/* submit for sand message  */
+
+.envoyer {
+    width: 29%;
+    height: 50px;
+    color: white;
+    background-color: black;
+}
+
+/* table for read cantent put from users */
+
+table {
+    width: 80%;
+    margin: 1.7rem auto;
+    box-shadow: 0 0 10px 0 black;
+}
+
+/* th for titel table and td for content */
+
+table th, table td {
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 0 10px 0 black;
+}
+
+@media only screen and (max-width: 600px) {
+    .navtop div h1 {
+        margin-top: 0.4rem;
+        font-size: 1.9rem;
+    }
+    .navtop div a {
+        padding: 0 4px;
+        font-size: 11px;
+    }
+    .title h2 {
+        font-size: 18px;
+    }
+    .comment {
+        width: 69%;
+    }
+    table tr {
+        display: block;
+    }
+    table td {
+        display: block;
+        text-align: right;
+    }
+    table th {
+        display: none;
+    }
+    table td::before {
+        content: attr(data-td);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+
+@keyframes tapper {
+    from {
+        width: 0ch;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}

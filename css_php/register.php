@@ -20,28 +20,29 @@ if (isset($_POST['submit'])) {
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>Register</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-    <link href="stylee.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="stylee.css">
+    <title>Document</title>
 </head>
 
 <body>
     <div class="register">
         <h1><i class="fab fa-yoast"></i>YouChat</h1>
-        
         <form action="" method="POST">
             <label><i class="fas fa-user"></i></label>
-            <input type="text" name="username" placeholder="Username"  required>
+            <input type="text" name="username" placeholder="Username" required>
 
             <label><i class="fas fa-user"></i></label>
-            <input type="text" name="pseudo" placeholder="pseudo"  required>
+            <input type="text" name="pseudo" placeholder="pseudo" required>
 
             <label><i class="fas fa-lock"></i></label>
-            <input type="password" name="password" placeholder="Password"  required>
+            <input type="password" name="password" placeholder="Password" required>
 
             <label><i class="fas fa-envelope"></i></label>
-            <input type="email" name="email" placeholder="Email"  required>
+            <input type="email" name="email" placeholder="Email" required>
 
             <input type="submit" name="submit" value="Register">
 
