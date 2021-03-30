@@ -4,9 +4,9 @@ include_once('db.php');
 if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $pseudo   = $_POST['pseudo'];
-    $email    = $_POST['email'];
     $password = $_POST['password'];
-
+    $email    = $_POST['email'];
+    
     $query  = ("INSERT INTO `register`(`username`,`pseudo`, `password`, `email`) VALUES ('$username', '$pseudo', '$password', '$email')");
     $result = mysqli_query($con, $query);
     if ($result) {
@@ -38,11 +38,12 @@ if (isset($_POST['submit'])) {
             <label><i class="fas fa-user"></i></label>
             <input type="text" name="pseudo" placeholder="pseudo" required>
 
+            <label><i class="fas fa-envelope"></i></label>
+            <input type="email" name="email" placeholder="Email" required>
+
             <label><i class="fas fa-lock"></i></label>
             <input type="password" name="password" placeholder="Password" required>
 
-            <label><i class="fas fa-envelope"></i></label>
-            <input type="email" name="email" placeholder="Email" required>
 
             <input type="submit" name="submit" value="Register">
 

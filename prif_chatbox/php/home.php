@@ -2,8 +2,8 @@
 session_start();
 include_once('db.php');
 $query = "SELECT * FROM messages ORDER BY temps DESC limit 7";
-$results = mysqli_query($con, $query);
-$messages = mysqli_fetch_assoc($results);
+$result = mysqli_query($con, $query);
+$messages = mysqli_fetch_assoc($result);
 ?>
 
 <!DOCTYPE html>
@@ -36,11 +36,11 @@ $messages = mysqli_fetch_assoc($results);
             <h2><?= "Welcome back : $pseudo " ?> <i class="far fa-laugh-wink"></i></h2>
         </div>
         <div class="messages">
-            <?php foreach ($results as $row) : ?>
+            <?php foreach ($result as $row) : ?>
                 <ul>
                     <li class="message">
                         <?= "<message style=color:black>" . $row["temps"]; ?> :
-                        <?= "<message style=color:beige>" . $row["contenu_message"]; ?>
+                        <?= "<message style=color:blue>" . $row["contenu_message"]; ?>
                     </li>
                 </ul>
             <?php endforeach ?>

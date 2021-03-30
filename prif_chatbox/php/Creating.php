@@ -3,10 +3,7 @@ include_once("db.php");
 if (count($_POST) > 0) {
     $query = "INSERT INTO users (username, pseudo, password, email) VALUES ('" . $_POST["username"] . "','" . $_POST["pseudo"] . "','" . $_POST["password"] . "','" . $_POST["email"] . "')";
     mysqli_query($con, $query);
-    $id = mysqli_insert_id($con);
-    if (!empty($id)) {
-        $message = "New User Added Successfully";
-    }
+    header('Location:Read.php');
 }
 ?>
 <!DOCTYPE html>
@@ -41,4 +38,3 @@ if (count($_POST) > 0) {
         </form>
     </div>
 </body>
-

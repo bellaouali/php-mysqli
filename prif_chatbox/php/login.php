@@ -2,9 +2,9 @@
 session_start();
 include_once('db.php');
 if (count($_POST) > 0) {
-    $query = "SELECT * FROM register WHERE username = '" . $_POST["username"] . "' AND password = '" . $_POST["password"] . "' ";
+    $query  = "SELECT * FROM register WHERE username = '" . $_POST["username"] . "' AND password = '" . $_POST["password"] . "' ";
     $result = mysqli_query($con, $query);
-    $row  = mysqli_fetch_array($result);
+    $row    = mysqli_fetch_array($result);
     if (is_array($row)) {
         $_SESSION["id"] = $row['id'];
         $_SESSION["username"] = $row['username'];
@@ -19,7 +19,7 @@ if (count($_POST) > 0) {
 <html>
 
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
