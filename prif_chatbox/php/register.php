@@ -11,8 +11,6 @@ if (isset($_POST['submit'])) {
     $result = mysqli_query($con, $query);
     if ($result) {
         header("Location:login.php");
-    } else {
-        echo "error";
     }
 }
 ?>

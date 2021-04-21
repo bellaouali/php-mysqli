@@ -25,7 +25,7 @@ $messages = mysqli_fetch_assoc($result);
                 <h1><i class="fab fa-yoast"></i>YouChat</h1>
             </div>
             <div class="navv">
-                <a href="profile.php"><i class="fas fa-id-badge"></i>Profile</a>
+                <a href="Read.php"><i class="fas fa-user-cog"></i>Admin</a>
                 <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
             </div>
         </nav>

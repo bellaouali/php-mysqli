@@ -31,6 +31,7 @@ if (count($_POST) > 0) {
     <div class="login">
         <h1><i class="fab fa-yoast"></i>YouChat</h1>
         <form action="" method="post">
+        
             <label><i class="fas fa-user"></i></label>
             <input type="text" name="username" placeholder="Name" required>
 
