@@ -6,11 +6,7 @@ if (count($_POST) > 0) {
     $result = mysqli_query($con, $query);
     $row    = mysqli_fetch_array($result);
     if (is_array($row)) {
-        $_SESSION["id"] = $row['id'];
-        $_SESSION["username"] = $row['username'];
         $_SESSION["pseudo"] = $row['pseudo'];
-        $_SESSION["password"] = $row['password'];
-        $_SESSION["email"] = $row['email'];
         header("Location:home.php");
     }
 }
@@ -31,6 +27,7 @@ if (count($_POST) > 0) {
     <div class="login">
         <h1><i class="fab fa-yoast"></i>YouChat</h1>
         <form action="" method="post">
+        
             <label><i class="fas fa-user"></i></label>
             <input type="text" name="username" placeholder="Name" required>
 

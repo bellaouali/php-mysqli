@@ -1,5 +1,4 @@
 <?php
-session_start();
 include_once('db.php');
 if (isset($_POST['submit'])) {
     $username = $_POST['username'];
@@ -11,8 +10,6 @@ if (isset($_POST['submit'])) {
     $result = mysqli_query($con, $query);
     if ($result) {
         header("Location:login.php");
-    } else {
-        echo "error";
     }
 }
 ?>
