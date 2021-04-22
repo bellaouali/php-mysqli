@@ -1,11 +1,11 @@
 <?php
 include_once("db.php");
 if (count($_POST) > 0) {
-    $query = "UPDATE users set username='" . $_POST["username"] . "', pseudo='" . $_POST["pseudo"] . "', password='" . $_POST["password"] . "',  email='" . $_POST["email"] . "' WHERE userId='" . $_GET["userId"] . "'";
+    $query = "UPDATE users set username ='" . $_POST["username"] . "', pseudo='" . $_POST["pseudo"] . "', password='" . $_POST["password"] . "',  email='" . $_POST["email"] . "' WHERE userId='" . $_GET["userId"] . "'";
     mysqli_query($con, $query);
     header('Location:Read.php');
 }
-$query = "SELECT * FROM users WHERE userId='" . $_GET["userId"] . "'";
+$query = "SELECT * FROM users WHERE userId ='" . $_GET["userId"] . "'";
 $result = mysqli_query($con, $query);
 $row = mysqli_fetch_array($result);
 ?>
